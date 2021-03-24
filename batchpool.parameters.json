@@ -1,0 +1,14 @@
+{
+    "resourcegroup": "azbatchwin-rg",
+    "batchaccountname" : "azbatchwin",
+    "poolname" : "windowspool01",
+    "poolnodes" : 2,
+    "vmsku" : "standard_ds2_v2",
+    "vnet": "azbatchwin-vnet",
+    "subnet": "azbatchwin-batch-subnet",
+    "filesharedir" : "z",
+    "azfileshareurl" : "https://azbatchwindatastorage.file.core.windows.net/azbatchwin-share",
+    "storageaccount" : "azbatchwindatastorage",    
+    "appid": "BatchApp",
+    "appversion": "1"
+}
