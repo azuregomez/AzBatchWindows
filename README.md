@@ -42,3 +42,11 @@ https://github.com/azuregomez/batchapp
 <td>4</td><td>batchjob.ps1<br/>batchjob.parameters.json</td><td>Powershell script that submits a job with a task. The job will be executed in the specified worker pool. The parameter file includes tasks to be executed, which is usually an invocation to the application installed in step 3.</td>
 </tr>
 </table>
+## Hybrid solution with HPC Pack
+This solution can be deployed in a peered spoke and leverage S2S VPN or ExpressRoute to reach out back to the data center, for example, to save results to an un-prem database.
+![Architecture](https://storagegomez.blob.core.windows.net/public/images/hybrid.png)
+## References
+https://docs.microsoft.com/en-us/azure/batch/
+https://docs.microsoft.com/en-us/azure/batch/batch-virtual-network
+https://docs.microsoft.com/en-us/azure/batch/virtual-file-mount
+https://github.com/Azure/azure-powershell/tree/master/src/Batch
