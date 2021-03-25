@@ -44,7 +44,7 @@ https://github.com/azuregomez/batchapp
 </table>
 <h2>Hybrid solution with HPC Pack</h2>
 This solution can be deployed in a peered spoke and leverage S2S VPN or ExpressRoute to reach out back to the data center, for example, to save results to an un-prem database.
-![Architecture](https://storagegomez.blob.core.windows.net/public/images/hybrid.png)
+<img ref=https://storagegomez.blob.core.windows.net/public/images/hybrid.png/>
 <h2>References</h2>
 https://docs.microsoft.com/en-us/azure/batch/
 https://docs.microsoft.com/en-us/azure/batch/batch-virtual-network
