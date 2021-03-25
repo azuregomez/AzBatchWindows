@@ -28,11 +28,9 @@ The solution works for
 At the end of this template, the batch files to be processed have to be copied to the Azure File Share via another process or manually through the Azure Portal.</td>
 </tr>
 <tr>
-<td>2</td><td></td><td>Uploading an application can be done through the portal or running:<br/>
-```
+<td>2</td><td></td><td>Uploading an application can be done through the portal or running:<br/><br/>
 New-AzBatchApplicationPackage -AccountName "azbatchwin" -ResourceGroupName "azbatchwin-rg" -ApplicationName "BatchApp" -ApplicationVersion "1" -FilePath "c:\batch\app\batchapp.zip" -Format "zip"
-```
-<br/>
+<br/><br/>
 A sample application that reads a file, counts the characters and writes the resukt to a database is here: <br/>
 https://github.com/azuregomez/batchapp
 </td>
