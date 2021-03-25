@@ -23,35 +23,12 @@ Step | Files | Description
 3 | batchpool.ps1  batchpool.parameters.json | Powershell Script that deploys a pool of worker nodes in a VNet, and copies applications and versions specified in the parameters file. The script also mounts the Azure File Share in all the pool nodes. The script reads parameters from the json file.
 4 | batchjob.ps1 batchjob.parameters.json | Powershell script that submits a job with a task. The job will be executed in the specified worker pool. The parameter file includes tasks to be executed, which is usually an invocation to the application installed in step 3.
 
-<table>
-<tr>
-<th>Step </th>
-<th>Files</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>1</td><td>azuredeploy.json<br/>azuredeploy.parameters.json</td><td>ARM Template that deploys Azure Resources: Azure Batch Account, Storage Account, File Share, VNet
-At the end of this template, the batch files to be processed have to be copied to the Azure File Share via another process or manually through the Azure Portal.</td>
-</tr>
-<tr>
-<td>2</td><td></td><td>Uploading an application can be done through the portal or running:<br/><br/>
-New-AzBatchApplicationPackage -AccountName "azbatchwin" -ResourceGroupName "azbatchwin-rg" -ApplicationName "BatchApp" -ApplicationVersion "1" -FilePath "c:\batch\app\batchapp.zip" -Format "zip"
-<br/><br/>
-A sample application that reads a file, counts the characters and writes the resukt to a database is here: <br/>
-https://github.com/azuregomez/batchapp
-</td>
-</tr>
-<tr>
-<td>3</td><td>batchpool.ps1<br/>batchpool.parameters.json</td><td>Powershell Script that deploys a pool of worker nodes in a VNet, and copies applications and versions specified in the parameters file. The script also mounts the Azure File Share in all the pool nodes. The script reads parameters from the json file.</td>
-</tr>
-<tr>
-<td>4</td><td>batchjob.ps1<br/>batchjob.parameters.json</td><td>Powershell script that submits a job with a task. The job will be executed in the specified worker pool. The parameter file includes tasks to be executed, which is usually an invocation to the application installed in step 3.</td>
-</tr>
-</table>
-<h2>Hybrid solution with HPC Pack</h2>
-This solution can be deployed in a peered spoke and leverage S2S VPN or ExpressRoute to reach out back to the data center, for example, to save results to an un-prem database.<br/>
-<img src="https://storagegomez.blob.core.windows.net/public/images/hybrid.png"/>
-<h2>References</h2>
+## Hybrid solution with HPC Pack
+This solution can be deployed in a peered spoke and leverage S2S VPN or ExpressRoute to reach out back to the data center, for example, to save results to an un-prem database.
+
+![Architecture](https://storagegomez.blob.core.windows.net/public/images/hybrid.png)
+
+## References
 https://docs.microsoft.com/en-us/azure/batch/
 https://docs.microsoft.com/en-us/azure/batch/batch-virtual-network
 https://docs.microsoft.com/en-us/azure/batch/virtual-file-mount
