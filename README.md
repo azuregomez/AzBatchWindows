@@ -12,3 +12,11 @@ The solution works for
 * Burst out from on-prem HPC Pack to Azure Batch
 ## Architecture
 ![Architecture](https://storagegomez.blob.core.windows.net/public/images/azbatchwin.png)
+## Implementation Steps
+1. Deploy Core Infrastructure: Azure Batch Account, File Share, Virtual Network.
+2. Upload an Application to Batch Account storage.
+3. Create a Worker pool of Windows nodes in the VNet, with the application installed and the file share mounted.
+4. Submit a batch Job with a Task that runs the application.
+Step | Files | Description
+-----|-------|------------
+1 | azuredeploy.json | ok
