@@ -15,6 +15,12 @@ Many organizations have the need to use HPC to process files, matching the follo
 2. Upload an Application to Batch Account storage.
 3. Create a Worker pool of Windows nodes in the VNet, with the application installed and the file share mounted.
 4. Submit a batch Job with a Task that runs the application.
+
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
+
 <table>
 <tr>
 <th>Step</th>
