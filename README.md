@@ -18,7 +18,7 @@ Many organizations have the need to use HPC to process files, matching the follo
 
 Step | Files | Description 
 ------------ | ------------- | -------------
-1 | azuredeploy.json <br\> azuredeploy.parameters.json | ARM Template that deploys Azure Resources: Azure Batch Account, Storage Account, File Share, VNet. <br\> After deploying this template, the batch files to be processed have to be copied to the Azure File Share via another process or manually through the Azure Portal.
+1 | azuredeploy.json  azuredeploy.parameters.json | ARM Template that deploys Azure Resources: Azure Batch Account, Storage Account, File Share, VNet.  After deploying this template, the batch files to be processed have to be copied to the Azure File Share via another process or manually through the Azure Portal.
 2 | Content in the second column | more content
 
 <table>
