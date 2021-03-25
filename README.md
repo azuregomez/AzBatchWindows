@@ -17,6 +17,13 @@ The solution works for
 2. Upload an Application to Batch Account storage.
 3. Create a Worker pool of Windows nodes in the VNet, with the application installed and the file share mounted.
 4. Submit a batch Job with a Task that runs the application.
-Step | Files | Description
------|-------|------------
-1 | azuredeploy.json | ok
+<table>
+<tr>
+<th>Step</th>
+<th>Files</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>1</td><td>azuredeploy.json</td><td>ok</td>
+</tr>
+</table>
