@@ -16,14 +16,16 @@ Many organizations have the need to use HPC to process files, matching the follo
 3. Create a Worker pool of Windows nodes in the VNet, with the application installed and the file share mounted.
 4. Submit a batch Job with a Task that runs the application.
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+Step | Files | Description 
+------------ | ------------- | -------------
+1 | azuredeploy.json
+azuredeploy.parameters.json| ARM Template that deploys Azure Resources: Azure Batch Account, Storage Account, File Share, VNet
+At the end of this template, the batch files to be processed have to be copied to the Azure File Share via another process or manually through the Azure Portal.
+2 | Content in the second column | more content
 
 <table>
 <tr>
-<th>Step</th>
+<th></th>
 <th>Files</th>
 <th>Description</th>
 </tr>
