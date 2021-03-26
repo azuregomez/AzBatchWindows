@@ -1,6 +1,6 @@
 {    
     "batchaccountname" : "azbatchwin",    
-    "poolid": "windowspool01",
+    "poolname": "windowspool01",
     "jobid": "job01",
     "taskid": "task01",
     "command": "cmd /c %AZ_BATCH_APP_PACKAGE_BatchApp#1%/batchapp.exe Z:/file1.txt"

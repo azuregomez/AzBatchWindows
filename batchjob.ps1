@@ -5,7 +5,7 @@ $params = get-content $paramfile | ConvertFrom-Json
 $accountname = $params.batchaccountname
 $context = Get-AzBatchAccount -AccountName $accountname
 $PoolInformation = New-Object -TypeName "Microsoft.Azure.Commands.Batch.Models.PSPoolInformation" 
-$PoolInformation.PoolId = $params.poolid
+$PoolInformation.PoolId = $params.poolname
 $jobid = $params.jobid
 New-AzBatchJob -Id $jobid  -PoolInformation $PoolInformation -BatchContext $context
 $taskid = $params.taskid
