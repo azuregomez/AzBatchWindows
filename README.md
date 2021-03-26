@@ -19,7 +19,7 @@ Many organizations have the need to use HPC to process files, matching the follo
 Step | Files | Description 
 ------------ | ------------- | -------------
 1 | azuredeploy.json  azuredeploy.parameters.json azuredeploy.ps1 | ARM Template that deploys Azure Resources: Azure Batch Account, Storage Account, File Share, VNet.  After deploying this template, the batch files to be processed have to be copied to the Azure File Share via another process or manually through the Azure Portal. The template is deployed by cloning this repo and running azuredeploy.ps1
-2 | | Uploading an application can be done through the portal or running: New-AzBatchApplicationPackage -AccountName "azbatchwin" -ResourceGroupName "azbatchwin-rg" -ApplicationName "BatchApp" -ApplicationVersion "1" -FilePath "c:\batch\app\batchapp.zip" -Format "zip"
+2 | | Uploading an application can be done through the portal or running: `New-AzBatchApplicationPackage -AccountName "azbatchwin" -ResourceGroupName "azbatchwin-rg" -ApplicationName "BatchApp" -ApplicationVersion "1" -FilePath "c:\batch\app\batchapp.zip" -Format "zip"`
 3 | batchpool.ps1  batchpool.parameters.json | Powershell Script that deploys a pool of worker nodes in a VNet, and copies applications and versions specified in the parameters file. The script also mounts the Azure File Share in all the pool nodes. The script reads parameters from the json file.
 4 | batchjob.ps1 batchjob.parameters.json | Powershell script that submits a job with a task. The job will be executed in the specified worker pool. The parameter file includes tasks to be executed, which is usually an invocation to the application installed in step 3.
 
