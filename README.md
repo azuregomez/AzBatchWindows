@@ -53,7 +53,7 @@ batchaccountname | Azure Batch Account Name created in step 1.
 poolname | Azure Batch pool namecreated in step 3.
 jobid | Name of the Job to be created.
 taskid | Name of teh Task to be created.
-command | Command of the task. For a Windows task, commands must start with cmd /c to start the shell. To execute an application that was loaded, it is necessary to use the right environment variable that has the path of the application.  The variable has the following format: `%AZ_BATCH_APP_PACKAGE_{Application Name}#{Application Version}%/{Executable}`. For example, to execute BatchApp, version 1 with BatcxhApp.exe, the command would be `%AZ_BATCH_APP_PACKAGE_BatchApp#1%/batchapp.exe`
+command | Command of the task. For a Windows task, commands must start with cmd /c to start the shell. To execute an application that was loaded, it is necessary to use the right environment variable that has the path of the application.  The variable has the following format: `%AZ_BATCH_APP_PACKAGE_{Application Name}#{Application Version}%/{Executable}`. For example, to execute BatchApp, version 1 with BatchApp.exe, the command would be `%AZ_BATCH_APP_PACKAGE_BatchApp#1%/batchapp.exe`
 ## Hybrid solution with HPC Pack
 This solution can be deployed in a peered spoke and leverage S2S VPN or ExpressRoute to reach out back to the data center, for example, to save results to an on-prem database.
 
@@ -61,6 +61,10 @@ This solution can be deployed in a peered spoke and leverage S2S VPN or ExpressR
 
 ## References
 https://docs.microsoft.com/en-us/azure/batch/
+
 https://docs.microsoft.com/en-us/azure/batch/batch-virtual-network
+
 https://docs.microsoft.com/en-us/azure/batch/virtual-file-mount
+
 https://github.com/Azure/azure-powershell/tree/master/src/Batch
+
