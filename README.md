@@ -56,6 +56,7 @@ taskid | Name of teh Task to be created.
 command | Command of the task. For a Windows task, commands must start with cmd /c to start the shell. To execute an application that was loaded, it is necessary to use the right environment variable that has the path of the application.  The variable has the following format: `%AZ_BATCH_APP_PACKAGE_{Application Name}#{Application Version}%/{Executable}`. For example, to execute BatchApp, version 1 with BatchApp.exe, the command would be `%AZ_BATCH_APP_PACKAGE_BatchApp#1%/batchapp.exe`
 ## Hybrid solution with HPC Pack
 This solution can be deployed in a peered spoke and leverage S2S VPN or ExpressRoute to reach out back to the data center, for example, to save results to an on-prem database.
+A full guide for a hybrid solution of HPC Pack bursting to Azure can be found  here:  https://github.com/tekgnu/azure_batch/blob/main/HPC_Pack_Burst_to_AZ_Batch.md
 
 ![Architecture](https://storagegomez.blob.core.windows.net/public/images/hybrid.png)
 
@@ -68,3 +69,6 @@ https://docs.microsoft.com/en-us/azure/batch/virtual-file-mount
 
 https://github.com/Azure/azure-powershell/tree/master/src/Batch
 
+## Acknowledgements
+
+Thanks to Matthew Perry (tekgnu) for helping develop and test this solution.
