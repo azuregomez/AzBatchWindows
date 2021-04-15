@@ -8,6 +8,7 @@ Many organizations have the need to use HPC to process files, matching the follo
 * Deploy an Azure Batch Pool in a VNet
 * Mount an Azure File Share in all the nodes.
 * This solution works for both a cloud-only HPC file processing or burst out from on-prem HPC Pack to Azure Batch.
+* The solution was tested with a sample batch application available here: https://github.com/azuregomez/BatchApp
 ## Architecture
 ![Architecture](https://storagegomez.blob.core.windows.net/public/images/azbatchwin.png)
 ## Implementation Steps
