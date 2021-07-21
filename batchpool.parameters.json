@@ -1,14 +1,14 @@
 {
-    "resourcegroup": "azbatchwin-rg",
-    "batchaccountname" : "azbatchwin",
-    "poolname" : "windowspool01",
+    "resourcegroup": "azbatch0721-rg",
+    "batchaccountname" : "azbatch0721",
+    "poolname" : "pool02",
     "poolnodes" : 2,
     "vmsku" : "standard_ds2_v2",
-    "vnet": "azbatchwin-vnet",
-    "subnet": "azbatchwin-batch-subnet",
+    "vnet": "azbatch0721-vnet",
+    "subnet": "azbatch0721-batch-subnet",
     "filesharedir" : "z",
-    "azfileshareurl" : "https://azbatchwindatastorage.file.core.windows.net/azbatchwin-share",
-    "storageaccount" : "azbatchwindatastorage",    
+    "azfileshareurl" : "https://azbatch0721datastorage.file.core.windows.net/azbatch0721-share",
+    "storageaccount" : "azbatch0721datastorage",    
     "appid": "BatchApp",
     "appversion": "1"
 }

@@ -1,6 +1,6 @@
-$path = "C:\projects\github\azbatchwindows\"
-$paramfile = $path + "batchjob.parameters.json"
-$params = get-content $paramfile | ConvertFrom-Json
+$ParameterFile = "batchpool.parameters.json"
+$templateParamFile = [System.IO.Path]::GetFullPath([System.IO.Path]::Combine($PSScriptRoot, $ParameterFile))
+$params = get-content $templateParamFile | ConvertFrom-Json
 # Submit a New Job and new task
 $accountname = $params.batchaccountname
 $context = Get-AzBatchAccount -AccountName $accountname

@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "deploymentPrefix": {
-            "value": "azbatchwin"
+            "value": "azbatch0721"
         }  
     }
 }

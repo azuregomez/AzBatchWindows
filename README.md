@@ -67,4 +67,3 @@ https://docs.microsoft.com/en-us/azure/batch/batch-virtual-network
 https://docs.microsoft.com/en-us/azure/batch/virtual-file-mount
 
 https://github.com/Azure/azure-powershell/tree/master/src/Batch
-

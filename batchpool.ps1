@@ -1,7 +1,7 @@
 # Your Local path where the pool solution files are saved
-$path = "C:\projects\github\azbatchwindows\"
-$paramfile = $path + "batchpool.parameters.json"
-$params = get-content $paramfile | ConvertFrom-Json
+$ParameterFile = "batchpool.parameters.json"
+$poolParamFile = [System.IO.Path]::GetFullPath([System.IO.Path]::Combine($PSScriptRoot, $ParameterFile))
+$params = get-content $poolParamFile | ConvertFrom-Json
 $vmsku = $params.vmsku
 $poolnodes = $params.poolnodes
 $poolname = $params.poolname
@@ -23,7 +23,7 @@ $networkConfig.SubnetId = $subnet.Id
 # -- with Applications deployed in the nodes
 # -- only if the applications have been uploaded
 # -- apps can be uploaded in the portal or with Powershell:
-# -- New-AzBatchApplicationPackage -AccountName "azbatchwin" -ResourceGroupName "azbatchwin-rg" -ApplicationName "BatchApp" -ApplicationVersion "1" -FilePath "c:\batch\app\batchapp.zip" -Format "zip"
+# -- New-AzBatchApplicationPackage -AccountName "azbatch0721" -ResourceGroupName "azbatch0721-rg" -ApplicationName "BatchApp" -ApplicationVersion "1" -FilePath "c:\batch\app\batchapp.zip" -Format "zip"
 [Microsoft.Azure.Commands.Batch.Models.PSApplicationPackageReference[]]$appRefs = @()
 $appPackageReference = New-Object Microsoft.Azure.Commands.Batch.Models.PSApplicationPackageReference
 $appPackageReference.ApplicationId = $params.appid
